@@ -1,0 +1,39 @@
+{
+  "name": "layerzero-demo",
+  "version": "1.0.0",
+  "scripts": {
+    "compile": "hardhat compile",
+    
+    "deploy:userstate": "hardhat run scripts/deploy/deployUserState.js --network sepolia",
+    "deploy:presale": "hardhat run scripts/deploy/deployPreSale.js --network amoy",
+    "deploy:staking": "hardhat run scripts/deploy/deployStaking.js --network amoy",
+    "deploy:all": "hardhat run scripts/deploy/deployToTestnets.js --network sepolia",
+    
+    "test:buy": "hardhat run scripts/test/testBuy.js --network amoy",
+    "test:full": "hardhat run scripts/test/testFullFlow.js --network amoy",
+    "test:local": "hardhat run scripts/test/simpleLocalTest.js --network hardhat",
+    "test:staking": "hardhat run scripts/test/stakingTest.js --network hardhat",
+    "test:all": "hardhat run scripts/test/testAll.js --network hardhat",
+    
+    "utils:set-dest": "hardhat run scripts/utils/setDestination.js --network amoy",
+    "utils:read-state": "hardhat run scripts/utils/readState.js --network sepolia",
+    "utils:check-balance": "hardhat run scripts/utils/checkBalance.js --network sepolia",
+    "utils:demo": "hardhat run scripts/utils/demo.js --network sepolia",
+    "utils:minimal": "hardhat run scripts/utils/minimalTest.js --network amoy",
+    "utils:set-trusted": "hardhat run scripts/utils/setTrustedRemotes.js --network amoy",
+    "utils:stake": "hardhat run scripts/utils/stakeTokens.js --network hardhat",
+    
+    "configure": "hardhat run scripts/utils/setDestination.js --network amoy",
+    "read:state": "hardhat run scripts/utils/readState.js --network sepolia",
+    "check:balance": "hardhat run scripts/utils/checkBalance.js --network sepolia",
+    "stake": "hardhat run scripts/utils/stakeTokens.js --network hardhat"
+  },
+  "devDependencies": {
+    "@layerzerolabs/solidity-examples": "^1.0.0",
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "dotenv": "^16.0.3",
+    "ethers": "^5.7.2",
+    "hardhat": "^2.17.1"
+  }
+}
